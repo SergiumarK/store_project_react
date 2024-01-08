@@ -85,8 +85,8 @@ const Home = () => {
     <h2 class="title">Featured Products</h2>
     <div class="row">
         <div class="col-4">
-            {/* <Link to="/details"><img src="/images/produs3.webp" alt="img2" /></Link>
-            <Link to="/details"><img src="/images/produs3.webp" alt="img2" /></Link> */}
+            <img src="/images/set-femei2.webp" alt="img2" />
+            <h4>Red Primted T-Shirt</h4>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -97,7 +97,7 @@ const Home = () => {
             <p>$50.00</p>
         </div>
         <div class="col-4">
-            <img src="/images/set-femei5.webp" alt="img2" />
+            <img src="/images/set-femei6.webp" alt="img2" />
             <h4>Red Primted T-Shirt</h4>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
@@ -121,7 +121,7 @@ const Home = () => {
             <p>$52.00</p>
         </div>
         <div class="col-4">
-            <img src="/images/set-femei5.webp" alt="img2" />
+            <img src="/images/set-femei3.webp" alt="img2" />
             <h4>Red Primted T-Shirt</h4>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
