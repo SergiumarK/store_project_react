@@ -56,7 +56,7 @@ const Home = () => {
           </div>
           <div className="col-2 ">
             <div key={images} className=' h-[110vh] w-[90%] m-auto  object-contain overflow-hidden rounded-md'>
-              <img className='size-full ' src={images[currentImageIndex].src} alt={images[currentImageIndex].alt} />
+              <img className='size-full' src={images[currentImageIndex].src} alt={images[currentImageIndex].alt} />
             </div>
           </div>
         </div>
