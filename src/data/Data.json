@@ -1,0 +1,579 @@
+[
+    {
+        "id": "1",
+        "name": "Dress",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei1.webp",
+        "price": 280 
+    },
+    {
+        "id": "2",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei2.webp",
+        "price": 460
+    },
+    {
+        "id": "3",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei3.webp",
+        "price": 480
+    },
+    {
+        "id": "4",
+        "name": "Women's T-shirt",
+        "brand": "Zara",
+        "category": "Women",
+        "image": "/images/set-femei4.webp",
+        "price": 195
+    },
+    {
+        "id": "5",
+        "name": "Turtleneck",
+        "brand": "Zara",
+        "category": "Women",
+        "image": "/images/set-femei5.webp",
+        "price": 280 
+    },
+    {
+        "id": "6",
+        "name": "Parka",
+        "brand": "levi's",
+        "category": "Women",
+        "image": "/images/set-femei6.webp",
+        "price": 259
+    },
+    {
+        "id": "7",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei7.webp",
+        "price": 480
+    },
+    {
+        "id": "8",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Women",
+        "image": "/images/set-femei8.webp",
+        "price": 480
+    },
+    {
+        "id": "9",
+        "name": "Pants",
+        "brand": "levi's",
+        "category": "Women",
+        "image": "/images/set-femei9.webp",
+        "price": 420
+    },
+    {
+        "id": "10",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei10.webp",
+        "price": 480
+    },
+    {
+        "id": "11",
+        "name": "Flared hoodie",
+        "brand": "Zara",
+        "category": "Women",
+        "image": "/images/set-femei11.webp",
+        "price": 450
+    },
+    {
+        "id": "12",
+        "name": "Pants",
+        "brand": "Zara",
+        "category": "Women",
+        "image": "/images/set-femei12.webp",
+        "price": 450
+    },
+    {
+        "id": "13",
+        "name": "Skirt",
+        "brand": "Zara",
+        "category": "Women",
+        "image": "/images/set-femei13.webp",
+        "price": 370
+    },
+    {
+        "id": "14",
+        "name": "Bathrobe",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei14.webp",
+        "price": 550
+    },
+    {
+        "id": "15",
+        "name": "Blouse",
+        "brand": "levi's",
+        "category": "Women",
+        "image": "/images/set-femei15.webp",
+        "price": 149
+    },
+    {
+        "id": "16",
+        "name": "Parka",
+        "brand": "levi's",
+        "category": "Women",
+        "image": "/images/set-femei16.webp",
+        "price": 259
+    },
+    {
+        "id": "17",
+        "name": "Gym suit",
+        "brand": "levi's",
+        "category": "Women",
+        "image": "/images/set-femei17.webp",
+        "price": 800
+    },
+    {
+        "id": "18",
+        "name": "Dress",
+        "brand": "H&M",
+        "category": "Women",
+        "image": "/images/set-femei8.webp",
+        "price": 349
+    },
+    {
+        "id": "19",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Men",
+        "image": "/images/set-barbati1.webp",
+        "price": 460
+    },
+    {
+        "id": "20",
+        "name": "Gym suit",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati2.webp",
+        "price": 680
+    },
+    {
+        "id": "21",
+        "name": "Gym suit",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati3.webp",
+        "price": 860
+    },
+    {
+        "id": "22",
+        "name": "Pajamas",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati4.webp",
+        "price": 480
+    },
+    {
+        "id": "23",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Men",
+        "image": "/images/set-barbati5.webp",
+        "price": 480
+    },
+    {
+        "id": "24",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Men",
+        "image": "/images/set-barbati6.webp",
+        "price": 480
+    },
+    {
+        "id": "25",
+        "name": "Sweater",
+        "brand": "H&M",
+        "category": "Men",
+        "image": "/images/set-barbati7.webp",
+        "price": 270
+    },
+    {
+        "id": "26",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Men",
+        "image": "/images/set-barbati8.webp",
+        "price": 480
+    },
+    {
+        "id": "27",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Men",
+        "image": "/images/set-barbati9.webp",
+        "price": 480
+    },
+    {
+        "id": "28",
+        "name": "Flared training",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati10.webp",
+        "price": 860
+    },
+    {
+        "id": "29",
+        "name": "Pants",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati11.webp",
+        "price": 259
+    },
+    {
+        "id": "30",
+        "name": "long sleeve polo shirt",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati12.webp",
+        "price": 199
+    },
+    {
+        "id": "31",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Men",
+        "image": "/images/set-barbati13.webp",
+        "price": 480
+    },
+    {
+        "id": "32",
+        "name": "Shirt",
+        "brand": "Zara",
+        "category": "Men",
+        "image": "/images/set-barbati14.webp",
+        "price": 159
+    },
+    {
+        "id": "33",
+        "name": "Bathrobe",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati15.webp",
+        "price": 550
+    },
+    {
+        "id": "34",
+        "name": "Pants",
+        "brand": "H&M",
+        "category": "Men",
+        "image": "/images/set-barbati16.webp",
+        "price": 420
+    },
+    {
+        "id": "35",
+        "name": "Parka",
+        "brand": "levi's",
+        "category": "Men",
+        "image": "/images/set-barbati17.webp",
+        "price": 199
+    },
+    {
+        "id": "36",
+        "name": "T-shirt",
+        "brand": "H&M",
+        "category": "Men",
+        "image": "/images/set-barbati18.webp",
+        "price": 270
+    },
+    {
+        "id": "37",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Children",
+        "image": "/images/set-copii1.webp",
+        "price": 179
+    },
+    {
+        "id": "38",
+        "name": "Girls dress",
+        "brand": "Zara",
+        "category": "Children",
+        "image": "/images/set-copii2.webp",
+        "price": 320
+    },
+    {
+        "id": "39",
+        "name": "Bathrobe",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii3.webp",
+        "price": 320
+    },
+    {
+        "id": "40",
+        "name": "Children's jumpsuit",
+        "brand": "H&M",
+        "category": "Children",
+        "image": "/images/set-copii4.webp",
+        "price": 230
+    },
+    {
+        "id": "41",
+        "name": "Gym suit",
+        "brand": "Zara",
+        "category": "Children",
+        "image": "/images/set-copii5.webp",
+        "price": 540
+    },
+    {
+        "id": "42",
+        "name": "Pajamas",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii6.webp",
+        "price": 290
+    },
+    {
+        "id": "43",
+        "name": "Pajamas",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii7.webp",
+        "price": 290
+    },
+    {
+        "id": "44",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Children",
+        "image": "/images/set-copii8.webp",
+        "price": 290
+    },
+    {
+        "id": "45",
+        "name": "Pajamas",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii9.webp",
+        "price": 300
+    },
+    {
+        "id": "46",
+        "name": "Pajamas",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii10.webp",
+        "price": 300
+    },
+    {
+        "id": "47",
+        "name": "Pajamas",
+        "brand": "Zara",
+        "category": "Children",
+        "image": "/images/set-copii11.webp",
+        "price": 300
+    },
+    {
+        "id": "48",
+        "name": "Pants",
+        "brand": "H&M",
+        "category": "Children",
+        "image": "/images/set-copii12.webp",
+        "price": 270
+    },
+    {
+        "id": "49",
+        "name": "Pajamas",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii13.webp",
+        "price": 300
+    },
+    {
+        "id": "50",
+        "name": "T-shirt",
+        "brand": "H&M",
+        "category": "Children",
+        "image": "/images/set-copii14.webp",
+        "price": 129
+    },
+    {
+        "id": "51",
+        "name": "Sweater",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii15.webp",
+        "price": 200
+    },
+    {
+        "id": "52",
+        "name": "T-shirt",
+        "brand": "levi's",
+        "category": "Children",
+        "image": "/images/set-copii16.webp",
+        "price": 129
+    },
+    {
+        "id": "53",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Children",
+        "image": "/images/set-copii17.webp",
+        "price": 290
+    },
+    {
+        "id": "54",
+        "name": "Pajamas",
+        "brand": "H&M",
+        "category": "Children",
+        "image": "/images/set-copii18.webp",
+        "price": 290
+    },
+    {
+        "id": "55",
+        "name": "Baby sweater",
+        "brand": "Zara",
+        "category": "babies",
+        "image": "/images/bebelusi1.webp",
+        "price": 170
+    },
+    {
+        "id": "56",
+        "name": "Baby jumpsuit",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi2.webp",
+        "price": 200
+    },
+    {
+        "id": "57",
+        "name": "Set of baby socks",
+        "brand": "Zara",
+        "category": "babies",
+        "image": "/images/bebelusi3.webp",
+        "price": 70
+    },
+    {
+        "id": "58",
+        "name": "Baby jumpsuit",
+        "brand": "Zara",
+        "category": "babies",
+        "image": "/images/bebelusi4.webp",
+        "price": 200
+    },
+    {
+        "id": "59",
+        "name": "Set baby",
+        "brand": "levi's",
+        "category": "babies",
+        "image": "/images/bebelusi5.webp",
+        "price": 310
+    },
+    {
+        "id": "60",
+        "name": "Baby pants",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi6.webp",
+        "price": 119
+    },
+    {
+        "id": "61",
+        "name": "Baby pants",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi7.webp",
+        "price": 89
+    },
+    {
+        "id": "62",
+        "name": "Baby blouse",
+        "brand": "Zara",
+        "category": "babies",
+        "image": "/images/bebelusi8.webp",
+        "price": 109
+    },
+    {
+        "id": "63",
+        "name": "T-shirt baby",
+        "brand": "levi's",
+        "category": "babies",
+        "image": "/images/bebelusi9.webp",
+        "price": 109
+    },
+    {
+        "id": "64",
+        "name": "T-shirt baby",
+        "brand": "levi's",
+        "category": "babies",
+        "image": "/images/bebelusi10.webp",
+        "price": 109
+    },
+    {
+        "id": "65",
+        "name": "Baby training",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi11.webp",
+        "price": 229
+    },
+    {
+        "id": "66",
+        "name": "Baby pants",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi12.webp",
+        "price": 120
+    },
+    {
+        "id": "67",
+        "name": "Baby training",
+        "brand": "Zara",
+        "category": "babies",
+        "image": "/images/bebelusi13.webp",
+        "price": 229
+    },
+    {
+        "id": "68",
+        "name": "Baby sweater",
+        "brand": "levi's",
+        "category": "babies",
+        "image": "/images/bebelusi14.webp",
+        "price": 99
+    },
+    {
+        "id": "69",
+        "name": "Baby sweater",
+        "brand": "levi's",
+        "category": "babies",
+        "image": "/images/bebelusi15.webp",
+        "price": 99
+    },
+    {
+        "id": "70",
+        "name": "T-shirt baby",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi16.webp",
+        "price": 109
+    },
+    {
+        "id": "71",
+        "name": "T-shirt baby",
+        "brand": "H&M",
+        "category": "babies",
+        "image": "/images/bebelusi17.webp",
+        "price": 109
+    },
+    {
+        "id": "72",
+        "name": "Set baby",
+        "brand": "Zara",
+        "category": "babies",
+        "image": "/images/bebelusi18.webp",
+        "price": 229
+    }
+    
+]

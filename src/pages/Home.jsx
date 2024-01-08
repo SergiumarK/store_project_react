@@ -1,12 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { FaStar, FaRegStar } from "react-icons/fa";
-
-
-
-
+import { Ctx } from '../data/Context';
 
 
 const Home = () => {
+  const {content} = useContext(Ctx)
+  const topProducts = content.slice(3, 6)
+  const featuredProducts = content.slice(16, 20)
+  const latestProducts = content.slice(14, 22)
+
   const images = [
     {
       src: '/images/ch.tree.png',
@@ -56,7 +58,7 @@ const Home = () => {
           <div className="col-2">
               <h1>Dress to impress this holiday season.</h1>
               <p>Our chic collection is the perfect gift to yourself.</p>
-              <a href="" class="btn">Explore Now &#8594;</a>
+              <a href="" className="btn">Explore Now &#8594;</a>
           </div>
           <div className="col-2 ">
             <div key={images} className=' h-[110vh] w-[90%] m-auto  object-contain overflow-hidden rounded-md'>
@@ -70,28 +72,43 @@ const Home = () => {
     <div className="categories">
         <div className="small-container">
             <div className="row">
-                <div className="col-3">
-                  <img src="/images/produs1.webp" alt="img2" /> 
-                </div>
-                <div className="col-3">
-                  <img src="/images/produs2.webp" alt="img2" />
-                </div>
-                <div className="col-3">
-                  <img src="/images/produs3.webp" alt="img2" />
-                </div>
+              {
+                topProducts.map(obj => (
+                  <div key={obj.id} className='col-3'>
+                    <img src={obj.image} alt={obj.id} />
+                  </div>
+                ))
+              }
             </div>
         </div>
     </div>
 
     {/* Featured products */}
 
-    <div class="small-container">
-    <h2 class="title">Featured Products</h2>
-    <div class="row">
-        <div class="col-4">
+    <div className="small-container">
+    <h2 className="title">Featured Products</h2>
+    <div className="row">
+      {
+        featuredProducts.map(obj => (
+          <div className='col-4'>
+            <img src={obj.image} alt={obj.id} />
+            <h4>{obj.name}</h4>
+            <div className='rating'>
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaRegStar />
+            </div>
+            <p>{obj.price} MDL</p>
+          </div>
+        ))
+      }
+        {/* <div className="col-4">
             <img src="/images/set-femei2.webp" alt="img2" />
             <h4>Red Primted T-Shirt</h4>
-            <div class="rating">
+            <div className="rating">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -101,10 +118,10 @@ const Home = () => {
             </div>
             <p>$50.00</p>
         </div>
-        <div class="col-4">
+        <div className="col-4">
             <img src="/images/set-femei6.webp" alt="img2" />
             <h4>Red Primted T-Shirt</h4>
-            <div class="rating">
+            <div className="rating">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -114,10 +131,10 @@ const Home = () => {
             </div>
             <p>$64.00</p>
         </div>
-        <div class="col-4">
+        <div className="col-4">
             <img src="/images/set-femei5.webp" alt="img2" />
             <h4>Red Primted T-Shirt</h4>
-            <div class="rating">
+            <div className="rating">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -127,10 +144,10 @@ const Home = () => {
             </div>
             <p>$52.00</p>
         </div>
-        <div class="col-4">
+        <div className="col-4">
             <img src="/images/set-femei3.webp" alt="img2" />
             <h4>Red Primted T-Shirt</h4>
-            <div class="rating">
+            <div className="rating">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -139,14 +156,31 @@ const Home = () => {
                 <FaRegStar />
             </div>
             <p>$76.00</p>
-        </div>
+        </div> */}
     </div>
 
 
-
+{/* latest products */}
       <h2 className="title">Latest Produsts</h2>
         <div className="row">
-            <div className="col-4">
+          {
+            latestProducts.map(obj => (
+              <div className='col-4'>
+                <img src={obj.image} alt={obj.id} />
+                <h4>{obj.name}</h4>
+                <div className='rating'>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaRegStar />
+                </div>
+                <p>{obj.price} MDL</p>
+              </div>
+            ))
+          }
+            {/* <div className="col-4">
               <img src="/images/set-femei1.webp" alt="img2" />
                 <h4>Red Primted T-Shirt</h4>
                 <div className="rating">
@@ -175,7 +209,7 @@ const Home = () => {
               <div className="col-4">
               <img src="/images/set-femei3.webp" alt="img2" />
                 <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
+                <div className="rating">
                   <FaStar />
                   <FaStar />
                   <FaStar />
@@ -251,7 +285,7 @@ const Home = () => {
                   <FaRegStar />
                 </div>
                 <p>$76.00</p>
-              </div>
+              </div> */}
           </div>
       </div>
 
@@ -324,22 +358,22 @@ const Home = () => {
       </div>
 
       {/* brands */}
-      <div class="brands">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-5">
+      <div className="brands">
+        <div className="small-container">
+            <div className="row">
+                <div className="col-5">
                     <img src="images/logo-godrej.png" alt=""/>
                 </div>
-                <div class="col-5">
+                <div className="col-5">
                     <img src="images/logo-oppo.png" alt=""/>
                 </div>
-                <div class="col-5">
+                <div className="col-5">
                     <img src="images/logo-coca-cola.png" alt=""/>
                 </div>
-                <div class="col-5">
+                <div className="col-5">
                     <img src="images/logo-paypal.png" alt=""/>
                 </div>
-                <div class="col-5">
+                <div className="col-5">
                     <img src="images/logo-philips.png" alt=""/>
                 </div>
             </div>

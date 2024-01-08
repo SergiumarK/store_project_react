@@ -6,6 +6,7 @@ import Account from './pages/Account'
 import Cart from './pages/cart'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
+import Context from './data/Context'
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,9 @@ const router = createBrowserRouter([
 
 const App = () => {
   return <div>
-      <RouterProvider router={router} />
+      <Context>
+        <RouterProvider router={router} />
+      </Context>
   </div>
     
   
