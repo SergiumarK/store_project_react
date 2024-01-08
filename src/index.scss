@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Playfair+Display+SC:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -142,12 +142,97 @@ h4 {
 
 .rating {
     color: #ff523b;
+    display: flex;
 }
 
 .col-4:hover {
     transform: translateY(-5px);
 }
-  
+
+// offer
+
+.offer {
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.col-2 .offer-img {
+    padding: 50px;
+}
+
+small {
+    color: #555;
+}
+
+// testimonial
+.testimonial {
+    padding-top: 100px;
+    
+
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.testimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.testimonial .col-3 .rating {
+    margin-left: 87px;
+    margin-bottom: 30px;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+
+
+.col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+
+.testimonial .col-3 h3 {
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+// brands
+
+.brands {
+    margin: 100px auto;
+
+}
+
+.col-5 {
+    width: 160px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover {
+    filter: grayscale(0);
+}
+
+
 
 // footer //
 
