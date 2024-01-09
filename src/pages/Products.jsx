@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { FaStar, FaRegStar } from "react-icons/fa";
+import { Ctx } from '../data/Context';
+import { Link } from 'react-router-dom';
+
+
 
 const Products = () => {
+  const {content} = useContext(Ctx)
+  const mainPage = content.slice(0, 20)
+
   return (
     <div class="small-container">
 
@@ -17,185 +24,12 @@ const Products = () => {
         </div>
 
         <div class="row">
-            <div class="col-4">
-                <img src="/images/set-femei1.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei2.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$64.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei3.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$52.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei4.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$76.00</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="/images/set-femei5.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei6.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$64.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei7.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$52.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei8.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$76.00</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="/images/set-femei9.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei10.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$64.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei1.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$52.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei3.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$76.00</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="/images/set-femei6.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei8.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
+        {
+          mainPage.map(obj => (
+            <Link to={`/view/${obj.id}`} className='col-4'>
+                <img src={obj.image} alt={obj.id} />
+                <h4>{obj.name}</h4>
+                <div className='rating'>
                     <FaStar />
                     <FaStar />
                     <FaStar />
@@ -203,34 +37,10 @@ const Products = () => {
                     <FaStar />
                     <FaRegStar />
                 </div>
-                <p>$64.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei2.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaRegStar />
-                </div>
-                <p>$52.00</p>
-            </div>
-            <div class="col-4">
-                <img src="/images/set-femei3.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div class="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$76.00</p>
-            </div>
+                <p>{obj.price} MDL</p>
+            </Link>
+            ))
+          }
         </div>
 
         <div class="page-btn">

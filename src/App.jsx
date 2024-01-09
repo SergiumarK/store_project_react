@@ -7,6 +7,7 @@ import Cart from './pages/cart'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Context from './data/Context'
+import View from './pages/View'
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />
+      },
+      {
+        path: "/view/:id",
+        element: <View />
       }
     ]
   }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react'
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { Ctx } from '../data/Context';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -11,23 +12,27 @@ const Home = () => {
 
   const images = [
     {
-      src: '/images/ch.tree.png',
+      src: '/images/ch1.png',
       alt: 'img2'
     },
     {
-      src: '/images/ch.3.png',
+      src: '/images/ch2.png',
       alt: 'img3'
     },
     {
-      src: '/images/ch.1.png',
+      src: '/images/ch3.png',
       alt: 'img4'
     },
     {
-      src: '/images/gift.png',
+      src: '/images/ch4.png',
       alt: 'img5'
     },
     {
-      src: '/images/ch.2.png',
+      src: '/images/ch5.png',
+      alt: 'img6'
+    },
+    {
+      src: '/images/ch6.png',
       alt: 'img6'
     }
   ]
@@ -58,7 +63,7 @@ const Home = () => {
           <div className="col-2">
               <h1>Dress to impress this holiday season.</h1>
               <p>Our chic collection is the perfect gift to yourself.</p>
-              <a href="" className="btn">Explore Now &#8594;</a>
+              <Link to={`/products`} className="btn">Explore Now &#8594;</Link>
           </div>
           <div className="col-2 ">
             <div key={images} className=' h-[110vh] w-[90%] m-auto  object-contain overflow-hidden rounded-md'>
@@ -90,7 +95,7 @@ const Home = () => {
     <div className="row">
       {
         featuredProducts.map(obj => (
-          <div className='col-4'>
+          <Link to={`/view/${obj.id}`} className='col-4'>
             <img src={obj.image} alt={obj.id} />
             <h4>{obj.name}</h4>
             <div className='rating'>
@@ -102,61 +107,9 @@ const Home = () => {
               <FaRegStar />
             </div>
             <p>{obj.price} MDL</p>
-          </div>
+          </Link>
         ))
       }
-        {/* <div className="col-4">
-            <img src="/images/set-femei2.webp" alt="img2" />
-            <h4>Red Primted T-Shirt</h4>
-            <div className="rating">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
-            </div>
-            <p>$50.00</p>
-        </div>
-        <div className="col-4">
-            <img src="/images/set-femei6.webp" alt="img2" />
-            <h4>Red Primted T-Shirt</h4>
-            <div className="rating">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
-            </div>
-            <p>$64.00</p>
-        </div>
-        <div className="col-4">
-            <img src="/images/set-femei5.webp" alt="img2" />
-            <h4>Red Primted T-Shirt</h4>
-            <div className="rating">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
-            </div>
-            <p>$52.00</p>
-        </div>
-        <div className="col-4">
-            <img src="/images/set-femei3.webp" alt="img2" />
-            <h4>Red Primted T-Shirt</h4>
-            <div className="rating">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
-            </div>
-            <p>$76.00</p>
-        </div> */}
     </div>
 
 
@@ -165,7 +118,7 @@ const Home = () => {
         <div className="row">
           {
             latestProducts.map(obj => (
-              <div className='col-4'>
+              <Link to={`/view/${obj.id}`} className='col-4'>
                 <img src={obj.image} alt={obj.id} />
                 <h4>{obj.name}</h4>
                 <div className='rating'>
@@ -177,115 +130,9 @@ const Home = () => {
                   <FaRegStar />
                 </div>
                 <p>{obj.price} MDL</p>
-              </div>
+              </Link>
             ))
           }
-            {/* <div className="col-4">
-              <img src="/images/set-femei1.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$50.00</p>
-              </div>
-              <div className="col-4">
-              <img src="/images/set-femei2.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$64.00</p>
-              </div>
-              <div className="col-4">
-              <img src="/images/set-femei3.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$52.00</p>
-              </div>
-              <div className="col-4">
-              <img src="/images/set-femei4.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$76.00</p>
-              </div>
-          </div>
-          <div className="row">
-              <div className="col-4">
-              <img src="/images/set-femei5.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$50.00</p>
-              </div>
-              <div className="col-4">
-              <img src="/images/set-femei6.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$64.00</p>
-              </div>
-              <div className="col-4">
-              <img src="/images/set-femei7.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$52.00</p>
-              </div>
-              <div className="col-4">
-              <img src="/images/set-femei8.webp" alt="img2" />
-                <h4>Red Primted T-Shirt</h4>
-                <div className="rating">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>$76.00</p>
-              </div> */}
           </div>
       </div>
 
@@ -301,7 +148,7 @@ const Home = () => {
                   <h1 className='font-extrabold'>Smart Band 5</h1>
                   <small>The MI Smart Band 5 features a 39.9% larger than MI Band 4 AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small>
                       <br />
-                  <a href="" className="btn">Buy Now &#8594;</a>    
+                  <Link to={`/account`} className="btn">Buy Now &#8594;</Link>    
               </div>
           </div>
         </div>
