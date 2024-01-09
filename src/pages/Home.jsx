@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-  const {content} = useContext(Ctx)
+  const {content, addToCart} = useContext(Ctx)
   const topProducts = content.slice(3, 6)
   const featuredProducts = content.slice(16, 20)
   const latestProducts = content.slice(14, 22)
@@ -95,19 +95,22 @@ const Home = () => {
     <div className="row">
       {
         featuredProducts.map(obj => (
-          <Link to={`/view/${obj.id}`} className='col-4'>
-            <img src={obj.image} alt={obj.id} />
-            <h4>{obj.name}</h4>
-            <div className='rating'>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </div>
-            <p>{obj.price} MDL</p>
-          </Link>
+          <div className='col-4'> 
+              <Link to={`/view/${obj.id}`}>
+                  <img src={obj.image} alt={obj.id} />
+              </Link>
+              <h4>{obj.name}</h4>
+              <div className='rating'>
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaRegStar />
+              </div>
+              <p>{obj.price} MDL</p>
+              <button onClick={() => addToCart(obj.id)} className=' hover:underline underline-[#ff523b] font-semibold'><small>Add to cart</small></button>
+          </div>
         ))
       }
     </div>
@@ -118,19 +121,22 @@ const Home = () => {
         <div className="row">
           {
             latestProducts.map(obj => (
-              <Link to={`/view/${obj.id}`} className='col-4'>
-                <img src={obj.image} alt={obj.id} />
-                <h4>{obj.name}</h4>
-                <div className='rating'>
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaRegStar />
-                </div>
-                <p>{obj.price} MDL</p>
-              </Link>
+              <div className='col-4'> 
+                  <Link to={`/view/${obj.id}`}>
+                      <img src={obj.image} alt={obj.id} />
+                  </Link>
+                  <h4>{obj.name}</h4>
+                  <div className='rating'>
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaRegStar />
+                  </div>
+                  <p>{obj.price} MDL</p>
+                  <button className=' hover:underline underline-[#ff523b] font-semibold'><small>Add to cart</small></button>
+              </div>
             ))
           }
           </div>

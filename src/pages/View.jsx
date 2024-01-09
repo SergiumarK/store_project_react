@@ -14,9 +14,9 @@ const View = () => {
 
   return (
     <div>
-        <div class="small-container single-product">
+        <div className="small-container single-product">
             {
-                <div class="row">
+                <div className="row">
                     <div className='col-2'>
                         <img src={viewDetails.image} alt={viewDetails.id} />
                     </div>
@@ -33,7 +33,7 @@ const View = () => {
                             <option>Small</option>
                         </select>
                         <input type="number" value="1"/>
-                        <a href="cart.html" class="btn">Add To Card</a>
+                        <button onClick={() => addToCart(obj.id)} className="btn">Add To Card</button>
                         <h3>Product details</h3>
                         <br />
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe aspernatur officiis debitis minus tenetur magnam?Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
@@ -45,14 +45,16 @@ const View = () => {
             <div className="small-container">
             <div className="row row-2">
                 <h2 className='font-bold'>Related Product</h2>
-                <Link to="/products" className='no-underline hover:underline underline-[#ff523b]'><p >View More</p></Link>
+                <Link to="/products" className=' hover:underline underline-[#ff523b]'><p >View More</p></Link>
             </div>
             <div className="small-container">
                 <div className="row">
                     {
                         relatedProducts.map(obj => (
-                        <Link to={`/view/${obj.id}`} className='col-4'>
-                            <img src={obj.image} alt={obj.id} />
+                        <div className='col-4'> 
+                            <Link to={`/view/${obj.id}`}>
+                                <img src={obj.image} alt={obj.id} />
+                            </Link>
                             <h4>{obj.name}</h4>
                             <div className='rating'>
                                 <FaStar />
@@ -63,7 +65,8 @@ const View = () => {
                                 <FaRegStar />
                             </div>
                             <p>{obj.price} MDL</p>
-                        </Link>
+                            <button onClick={() => addToCart(obj.id)} className=' hover:underline underline-[#ff523b] font-semibold'><small>Add to cart</small></button>
+                        </div>
                         ))
                     }
                 </div>

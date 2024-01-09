@@ -26,8 +26,10 @@ const Products = () => {
         <div class="row">
         {
           mainPage.map(obj => (
-            <Link to={`/view/${obj.id}`} className='col-4'>
-                <img src={obj.image} alt={obj.id} />
+            <div className='col-4'> 
+                <Link to={`/view/${obj.id}`}>
+                    <img src={obj.image} alt={obj.id} />
+                </Link>
                 <h4>{obj.name}</h4>
                 <div className='rating'>
                     <FaStar />
@@ -38,7 +40,8 @@ const Products = () => {
                     <FaRegStar />
                 </div>
                 <p>{obj.price} MDL</p>
-            </Link>
+                <button onClick={() => addToCart(obj.id)} className=' hover:underline underline-[#ff523b] font-semibold'><small>Add to cart</small></button>
+            </div>
             ))
           }
         </div>
