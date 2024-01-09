@@ -1,79 +1,54 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Ctx } from '../data/Context'
+import { Link } from 'react-router-dom'
+
 
 const Cart = () => {
+  const { cart } = useContext(Ctx)
+
+
   return (
     <div>
-    {/* //   <div class="small-container cart-page">
-    //     <table>
-    //         <tr>
-    //             <th>Product</th>
-    //             <th>Quantity</th>
-    //             <th>Subtotal</th>
-    //         </tr>
-    //         <tr>
-    //             <td>
-    //                 <div class="cart-info">
-    //                     <img src="images/buy-1.jpg" alt="">
-    //                     <div>
-    //                         <p>Red Printed T-Shirt</p>
-    //                         <small>Price: $50.00</small>
-    //                         <br>
-    //                         <a href="">Remove</a>
-    //                     </div>
-    //                 </div>
-    //             </td>
-    //             <td><input type="number" value="1"></td>
-    //             <td>$50.00</td>
-    //         </tr>
-    //         <tr>
-    //             <td>
-    //                 <div class="cart-info">
-    //                     <img src="images/buy-2.jpg" alt="">
-    //                     <div>
-    //                         <p>Red Printed T-Shirt</p>
-    //                         <small>Price: $67.00</small>
-    //                         <br>
-    //                         <a href="">Remove</a>
-    //                     </div>
-    //                 </div>
-    //             </td>
-    //             <td><input type="number" value="1"></td>
-    //             <td>$67.00</td>
-    //         </tr>
-    //         <tr>
-    //             <td>
-    //                 <div class="cart-info">
-    //                     <img src="images/buy-3.jpg" alt="">
-    //                     <div>
-    //                         <p>Red Printed T-Shirt</p>
-    //                         <small>Price: $78.00</small>
-    //                         <br>
-    //                         <a href="">Remove</a>
-    //                     </div>
-    //                 </div>
-    //             </td>
-    //             <td><input type="number" value="1"></td>
-    //             <td>$78.00</td>
-    //         </tr>
-    //     </table>
+      <div className="small-container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            {
+              cart.map(obj => (
+                <tr key={obj.id}>
+                    <td>
+                        <div class="cart-info">
+                            <img src={obj.image} alt="Product image" />
+                            <div>
+                                <p>{obj.name}</p>
+                                <small>{obj.price} MDL</small>
+                                <br/>
+                                <button to="/" className='hover:underline underline-[#ff523b] '>Remove</button>
+                            </div>
+                        </div>
+                    </td>
+                    <button>+</button>
+                    <h2>{obj.quantity}</h2>
+                    <button>-</button>
+                    
+                </tr>
+              ))
+            }
+        </table>
 
-    //     <div class="total-price">
-    //         <table>
-    //             <tr>
-    //                 <td>Subtotal</td>
-    //                 <td>$200.00</td>
-    //             </tr>
-    //             <tr>
-    //                 <td>Tax</td>
-    //                 <td>$35.00</td>
-    //             </tr>
-    //             <tr>
-    //                 <td>Total</td>
-    //                 <td>$230.00</td>
-    //             </tr>
-    //         </table>
-    //     </div>
-    //   </div> */}
+        <div className="total-price">
+            <table>
+                <tr>
+                    <td>Total</td>
+                    <td>$230.00</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
     </div>
   )
 }
