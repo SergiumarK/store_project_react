@@ -1,10 +1,28 @@
 import React, { useContext } from 'react'
 import { Ctx } from '../data/Context'
-import { Link } from 'react-router-dom'
+
 
 
 const Cart = () => {
-  const { cart } = useContext(Ctx)
+  const { cart, setCart } = useContext(Ctx)
+
+  const changeQnt = (id, type) => {
+    setCart(cart.map(obj => {
+      if (obj.id === id) {
+        if (type === "minus") {
+          return {...obj, quantity: obj.quantity - 1}
+        } else {
+          return {...obj, quantity: obj.quantity + 1}
+        }
+      } else {
+        return obj
+      }
+    }))
+  }
+
+  const deleteProduct = (id) => {
+    setCart(cart.filter(obj => obj.id !== id))
+  }
 
 
   return (
@@ -20,34 +38,42 @@ const Cart = () => {
               cart.map(obj => (
                 <tr key={obj.id}>
                     <td>
-                        <div class="cart-info">
-                            <img src={obj.image} alt="Product image" />
+                        <div className="cart-info">
+                            <img className='object-cover' src={obj.image} alt="Product image" />
                             <div>
                                 <p>{obj.name}</p>
-                                <small>{obj.price} MDL</small>
+                                <small>
+                                  {
+                                    obj.quantity > 1 ? 
+                                    `${obj.quantity} x ${obj.price} MDL` :
+                                    `${obj.price} MDL`
+                                  }
+                                </small>
                                 <br/>
-                                <button to="/" className='hover:underline underline-[#ff523b] '>Remove</button>
+                                <button onClick={() => deleteProduct(obj.id)} to="/" className='hover:underline underline-[#ff523b] '>Remove</button>
                             </div>
                         </div>
                     </td>
-                    <button>+</button>
+                    <button onClick={() => changeQnt(obj.id, "plus")}>+</button>
                     <h2>{obj.quantity}</h2>
-                    <button>-</button>
-                    
+                    <button onClick={() => changeQnt(obj.id, "minus")} className={`${obj.quantity <= 1 ? "hidden" : ""}`}>-</button>
+                    <td>{`${obj.quantity * obj.price} MDL`}</td>
                 </tr>
               ))
             }
         </table>
 
         <div className="total-price">
-            <table>
-                <tr>
-                    <td>Total</td>
-                    <td>$230.00</td>
-                </tr>
-            </table>
+          <table>
+            <tbody>
+              <tr>
+                <td>Total</td>
+                <td>{`${cart.reduce((total, obj) => total + obj.quantity * obj.price, 0)} MDL`}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
+        
     </div>
     </div>
   )

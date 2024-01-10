@@ -1,11 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react"
 import contentJSON from "./Data.json"
 
 export const Ctx = createContext()
 
 const Context = ({children}) => {
     const [content, setContent] = useState(contentJSON)
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || [])
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }, [cart])
 
     const addToCart = (id) => {
         const product = content.find(obj => obj.id === id)
@@ -22,11 +26,13 @@ const Context = ({children}) => {
         } else {
             setCart([...cart, {...product, quantity: 1}])
         }
-        console.log(cart)
+
+        
+        
     }
 
     return (
-        <Ctx.Provider value={{content: content, cart: cart, addToCart: addToCart}}>
+        <Ctx.Provider value={{content: content, cart: cart, addToCart: addToCart, setCart: setCart}}>
             {children}
         </Ctx.Provider>
     )

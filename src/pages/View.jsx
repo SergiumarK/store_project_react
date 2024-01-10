@@ -1,16 +1,14 @@
-import React, {useContext} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { useParams } from 'react-router-dom'
 import { Ctx } from '../data/Context'
 import { Link } from "react-router-dom"
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 const View = () => {
-    const {content} = useContext(Ctx)
+    const {content, addToCart} = useContext(Ctx)
     const {id} = useParams()
     const viewDetails = content.find(obj => obj.id === id)
     const relatedProducts = content.slice(26, 30)
-    
-    
 
   return (
     <div>
@@ -22,6 +20,7 @@ const View = () => {
                     </div>
                     <div className='col-2'>
                         <p>Category: {viewDetails.category}</p>
+                        <small>Brand: {viewDetails.brand}</small>
                         <h1>{viewDetails.name}</h1>
                         <h4>{viewDetails.price} MDL</h4>
                         <select>
@@ -32,8 +31,7 @@ const View = () => {
                             <option>Medium</option>
                             <option>Small</option>
                         </select>
-                        <input type="number" value="1"/>
-                        <button onClick={() => addToCart(obj.id)} className="btn">Add To Card</button>
+                        <button onClick={() => addToCart(viewDetails.id)} className="btn">Add To Card</button>
                         <h3>Product details</h3>
                         <br />
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe aspernatur officiis debitis minus tenetur magnam?Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
