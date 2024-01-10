@@ -95,7 +95,7 @@ const Home = () => {
     <div className="row">
       {
         featuredProducts.map(obj => (
-          <div className='col-4'> 
+          <div key={obj.id} className='col-4'> 
               <Link to={`/view/${obj.id}`}>
                   <img src={obj.image} alt={obj.id} />
               </Link>
@@ -121,7 +121,7 @@ const Home = () => {
         <div className="row">
           {
             latestProducts.map(obj => (
-              <div className='col-4'> 
+              <div key={obj.id} className='col-4'> 
                   <Link to={`/view/${obj.id}`}>
                       <img src={obj.image} alt={obj.id} />
                   </Link>
@@ -135,7 +135,7 @@ const Home = () => {
                       <FaRegStar />
                   </div>
                   <p>{obj.price} MDL</p>
-                  <button className=' hover:underline underline-[#ff523b] font-semibold'><small>Add to cart</small></button>
+                  <button onClick={() => addToCart(obj.id)} className=' hover:underline underline-[#ff523b] font-semibold'><small>Add to cart</small></button>
               </div>
             ))
           }

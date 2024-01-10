@@ -42,8 +42,8 @@ const Account = () => {
                 <form onSubmit={handleSubmit}>
                   {formType === 'login' && (
                     <>
-                      <input type="text" placeholder="UserName" />
-                      <input type="password" placeholder="Password" />
+                      <input className='input1' type="text" placeholder="UserName" />
+                      <input className='input1' type="password" placeholder="Password" />
                       <button type="submit" className="btn">
                         Login
                       </button>
@@ -53,9 +53,9 @@ const Account = () => {
 
                   {formType === 'register' && (
                     <>
-                      <input type="text" placeholder="UserName" />
-                      <input type="email" placeholder="email" />
-                      <input type="password" placeholder="Password" />
+                      <input className='input1' type="text" placeholder="UserName" />
+                      <input className='input1' type="email" placeholder="email" />
+                      <input className='input1' type="password" placeholder="Password" />
                       <button type="submit" className="btn">
                         Register
                       </button>
