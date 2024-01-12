@@ -21,7 +21,11 @@ const Products = () => {
     min: 0,
     max: 1000
   })
+  // Starea pentru filtrul sort
   const [sort, setSort] = useState("")
+
+  const [search, setSearch] = useState("")
+  
 
   // Numărul de produse pe pagină
   const productsPerPage = 16
@@ -34,6 +38,13 @@ const Products = () => {
     (brandFilter ? pr.brand === brandFilter : true) &&
     (categoryFilter ? pr.category === categoryFilter : true)
   )
+
+  // Funcție pentru a trece la următoarea pagină
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  }
 
   // Extrage produsele pentru pagina curentă
   const currentProducts = filteredProducts.slice(startIndex, endIndex)
@@ -54,6 +65,7 @@ const Products = () => {
     }
   }, [priceFilter])
 
+  // Efect secundar pentru a aplica sort
   useEffect(() => {
     if (sort !== "") {
       setData(data.sort((a, b) => sort === "DESC" ? a.price - b.price : b.price - a.price))
@@ -73,6 +85,12 @@ const Products = () => {
     backgroundColor: '#ff523b',
     color: '#fff',  // Culoarea textului pe fundalul activ
   };
+
+  const handleSearch = () => {
+    if (search !== "") {
+      setData(content.filter(pr => pr.brand.toLowerCase().includes(search.toLowerCase()) || pr.name.toLowerCase().includes(search.toLowerCase())))
+    }
+  }
 
   return (
     <div className="small-container">
@@ -127,6 +145,15 @@ const Products = () => {
         </div>
       </div>
 
+      <div className='flex flex-col gap-1 ml-[85%]'>
+          <label htmlFor="search"><small className='font-bold'>Search</small></label>
+          <input  type="text" placeholder="Serach" value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearch()
+            }
+          }}/>
+      </div>
+
       
       <div className="page-btn">
         {Array.from({ length: totalPages }, (_, index) => (
@@ -139,7 +166,7 @@ const Products = () => {
             {index + 1}
           </span>
         ))}
-        <span>&#8594;</span>
+        <span onClick={nextPage}>&#8594;</span>
       </div>
 
       
@@ -178,7 +205,7 @@ const Products = () => {
             {index + 1}
           </span>
         ))}
-        <span>&#8594;</span>
+        <span onClick={nextPage}>&#8594;</span>
       </div>
     </div>
   );
