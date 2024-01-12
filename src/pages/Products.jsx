@@ -21,6 +21,7 @@ const Products = () => {
     min: 0,
     max: 1000
   })
+  const [sort, setSort] = useState("")
 
   // Numărul de produse pe pagină
   const productsPerPage = 16
@@ -53,6 +54,12 @@ const Products = () => {
     }
   }, [priceFilter])
 
+  useEffect(() => {
+    if (sort !== "") {
+      setData(data.sort((a, b) => sort === "DESC" ? a.price - b.price : b.price - a.price))
+    }
+  }, [sort])
+
   // Funcție pentru a reseta toate filtrele
   const resetFilters = () => {
     setBrandFilter('');
@@ -81,6 +88,15 @@ const Products = () => {
             <option value="H&M">H&M</option>
             <option value="levi's">Levi's</option>
             <option value="Zara">Zara</option>
+          </select>
+        </div>
+
+        <div className='flex flex-col gap-1'>
+          <label htmlFor="sort"><small className='font-bold'>Sort</small></label>
+          <select value={sort} onChange={(e) => setSort(e.target.value)} id='sort'>
+            <option value="ASC">By price ASC</option>
+            <option value="DESC">By price DESC</option>
+            
           </select>
         </div>
 
